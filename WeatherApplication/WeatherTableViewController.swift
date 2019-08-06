@@ -35,7 +35,11 @@ class WeatherTableViewController: UITableViewController {
         }
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorColor = UIColor.clear
+        let imageView = UIImageView(frame: tableView.bounds)
+        imageView.image = UIImage(named: "b")
+        tableView.backgroundView = imageView
     }
+    
 
     func generateDailyDetail() {
     
@@ -60,7 +64,7 @@ class WeatherTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return isLoaded ? 3 : 0
+        return isLoaded ? 4 : 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,26 +86,34 @@ class WeatherTableViewController: UITableViewController {
             if let tableCell = cell as? HourlyTemperatureTableViewCell {
                 tableCell.hourlyTempDetail = temperatureDetail
                 tableCell.delegate = self
+                tableCell.backgroundColor = UIColor.clear
             }
             
             return cell
-        } else {
+        } else if indexPath.section == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DailyTemperature", for: indexPath)
             if let tableCell = cell as? DailyTemperatureTableViewCell {
                 tableCell.dailyTemperatureDetail = dailyTemperatureDetail
             }
-            cell.backgroundColor = UIColor.orange
+            cell.backgroundColor = UIColor.clear
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ShowMore", for: indexPath)
+            cell.backgroundColor = UIColor.clear
             return cell
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let height = tableView.bounds.height
         if indexPath.section == 0 {
-            return 300
+            return height * 0.3
         } else if indexPath.section == 1 {
-            return 150
+            return height * 0.1
+        } else if indexPath.section == 2 {
+            return height * 0.1
         } else {
-            return 250
+            return height * 0.4
         }
     }
 }

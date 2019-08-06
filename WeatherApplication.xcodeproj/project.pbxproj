@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A60DBD822F9866300FA6A17 /* ShowMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A60DBD722F9866300FA6A17 /* ShowMoreTableViewCell.swift */; };
 		3A6F7B9322F6245300AF5FAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6F7B9222F6245300AF5FAA /* AppDelegate.swift */; };
 		3A6F7B9822F6245300AF5FAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F7B9622F6245300AF5FAA /* Main.storyboard */; };
 		3A6F7B9A22F6245500AF5FAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A6F7B9922F6245500AF5FAA /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3A60DBD722F9866300FA6A17 /* ShowMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMoreTableViewCell.swift; sourceTree = "<group>"; };
 		3A6F7B8F22F6245300AF5FAA /* WeatherApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6F7B9222F6245300AF5FAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A6F7B9722F6245300AF5FAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				3A6F7BA922F6C0A000AF5FAA /* DetailContentTableViewCell.swift */,
 				3A6F7BAB22F6C0BA00AF5FAA /* HourlyTemperatureTableViewCell.swift */,
 				3A6F7BB522F6C8E200AF5FAA /* HourlyTemperatureCollectionViewCell.swift */,
+				3A60DBD722F9866300FA6A17 /* ShowMoreTableViewCell.swift */,
 				3A6F7BA722F6C07600AF5FAA /* DailyTemperatureTableViewCell.swift */,
 				3A6F7BB722F7151A00AF5FAA /* DailyTemperatureCollectionViewCell.swift */,
 			);
@@ -183,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A60DBD822F9866300FA6A17 /* ShowMoreTableViewCell.swift in Sources */,
 				3A6F7BA622F6BF6700AF5FAA /* WeatherTableViewController.swift in Sources */,
 				3A6F7BB222F6C2FE00AF5FAA /* HourlyTemperatureDetail.swift in Sources */,
 				3A6F7BB622F6C8E200AF5FAA /* HourlyTemperatureCollectionViewCell.swift in Sources */,

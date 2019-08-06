@@ -17,7 +17,12 @@ struct HourlyTemperatureDetail {
     let avgTemp: Int
     let weather: String
     
-    static let myCalendar = Calendar(identifier: .gregorian)
+    static let myCalendar: Calendar = {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(identifier: "UTC")!
+        return calendar
+    }()
+    
     
     var weekday: String {
         return daysInWeek[HourlyTemperatureDetail.myCalendar.component(.weekday, from: date) - 1]
@@ -26,7 +31,7 @@ struct HourlyTemperatureDetail {
     var hour: String {
         var time = HourlyTemperatureDetail.myCalendar.component(.hour, from: date)
         let clock = (time < 12) ? "AM" : "PM"
-        time = (time > 12) ? (24 - time) : time
-        return String(time) + clock
+        time = (time > 12) ? (time - 12) : time
+        return "\(time) " + clock
     }
 }
